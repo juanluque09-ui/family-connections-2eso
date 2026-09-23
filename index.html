@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A self-paced B1 family relationships revision trail for 2º ESO.">
+  <title>Family Connections | Unit 1 Revision</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson">Skip to the activities</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Family Connections home">
+      <span class="brand-mark" aria-hidden="true">FC</span>
+      <span>Family Connections</span>
+    </a>
+    <div class="top-actions">
+      <span class="course-pill">2º ESO · B1</span>
+      <button class="icon-button" id="resetButton" type="button" title="Reset all progress" aria-label="Reset all progress">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v6h6M20 20v-6h-6M5.6 15a7 7 0 0 0 11.8 2l2.6-3M4 10l2.6-3a7 7 0 0 1 11.8 2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="pageTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">UNIT 1 · REVISION TRAIL</p>
+        <h1 id="pageTitle">How is everyone <em>connected?</em></h1>
+        <p class="hero-intro">Learn the words, read the clues and solve a family mystery. Four short missions. Instant feedback. One final case.</p>
+        <a class="primary-button" href="#lesson">Start the trail <span aria-hidden="true">→</span></a>
+        <div class="hero-meta" aria-label="Activity information">
+          <span><b>4</b> missions</span>
+          <span><b>20</b> questions</span>
+          <span><b>≈15</b> minutes</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="An illustrated family connection map">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="avatar avatar-a"><span>G</span><small>grandparent</small></div>
+        <div class="avatar avatar-b"><span>M</span><small>mother</small></div>
+        <div class="avatar avatar-c"><span>C</span><small>cousin</small></div>
+        <div class="avatar avatar-d"><span>S</span><small>sibling</small></div>
+        <svg class="connectors" viewBox="0 0 500 400" aria-hidden="true">
+          <path d="M250 62 C250 140 135 120 135 210"/>
+          <path d="M250 62 C250 140 365 120 365 210"/>
+          <path d="M135 258 C135 330 250 285 250 352"/>
+          <path d="M365 258 C365 330 250 285 250 352"/>
+        </svg>
+        <div class="visual-label"><span>family</span><strong>connections</strong></div>
+      </div>
+    </section>
+
+    <section class="lesson" id="lesson" aria-labelledby="trailTitle">
+      <div class="lesson-heading">
+        <div>
+          <p class="eyebrow">YOUR ROUTE</p>
+          <h2 id="trailTitle">Follow the family trail</h2>
+        </div>
+        <div class="score-card" aria-live="polite">
+          <span>Score</span>
+          <strong><span id="scoreValue">0</span>/<span id="scoreTotal">20</span></strong>
+        </div>
+      </div>
+
+      <div class="progress-wrap" aria-label="Course progress">
+        <div class="progress-copy"><span id="progressLabel">Mission 1 of 4</span><span id="progressPercent">0%</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <nav class="mission-nav" aria-label="Revision missions">
+        <button class="mission-tab is-active" type="button" data-stage="0" aria-current="step">
+          <span class="mission-number">01</span><span><b>Family words</b><small>Meet the vocabulary</small></span><span class="status-dot"></span>
+        </button>
+        <button class="mission-tab is-locked" type="button" data-stage="1" disabled>
+          <span class="mission-number">02</span><span><b>Make connections</b><small>Use possessive ’s</small></span><span class="status-dot"></span>
+        </button>
+        <button class="mission-tab is-locked" type="button" data-stage="2" disabled>
+          <span class="mission-number">03</span><span><b>Read the tree</b><small>Follow the clues</small></span><span class="status-dot"></span>
+        </button>
+        <button class="mission-tab is-locked" type="button" data-stage="3" disabled>
+          <span class="mission-number">04</span><span><b>Family Detective</b><small>Solve the final case</small></span><span class="status-dot"></span>
+        </button>
+      </nav>
+
+      <div class="stage-shell">
+        <section class="stage-panel" id="stage-0" data-stage="0" aria-labelledby="stage0Title">
+          <div class="stage-header">
+            <div class="stage-icon sky" aria-hidden="true">Aa</div>
+            <div><p class="stage-kicker">MISSION 01</p><h3 id="stage0Title">Family words</h3><p>Read each clue and choose the family member. You get feedback straight away.</p></div>
+          </div>
+          <div class="question-list" data-questions="familyWords"></div>
+          <div class="stage-finish" hidden>
+            <div><span class="finish-tick">✓</span><p><strong>Vocabulary mission complete!</strong><br><span class="stage-summary"></span></p></div>
+            <button class="next-button" type="button" data-next="1">Next: make connections <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <section class="stage-panel" id="stage-1" data-stage="1" aria-labelledby="stage1Title" hidden>
+          <div class="stage-header">
+            <div class="stage-icon coral" aria-hidden="true">’s</div>
+            <div><p class="stage-kicker">MISSION 02</p><h3 id="stage1Title">Make connections</h3><p>Choose the sentence that describes the relationship correctly.</p></div>
+          </div>
+          <aside class="tip-card"><b>Quick tip</b><span>Use <strong>’s</strong> after a name: <em>Leo is Maya’s brother.</em> Use <strong>their</strong> for two or more people: <em>Leo and Maya visit their grandparents.</em></span></aside>
+          <div class="question-list" data-questions="connections"></div>
+          <div class="stage-finish" hidden>
+            <div><span class="finish-tick">✓</span><p><strong>Connections complete!</strong><br><span class="stage-summary"></span></p></div>
+            <button class="next-button" type="button" data-next="2">Next: read the tree <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <section class="stage-panel" id="stage-2" data-stage="2" aria-labelledby="stage2Title" hidden>
+          <div class="stage-header">
+            <div class="stage-icon mint" aria-hidden="true">⌘</div>
+            <div><p class="stage-kicker">MISSION 03</p><h3 id="stage2Title">Read the family tree</h3><p>Study the Carter family. Then follow each clue carefully.</p></div>
+          </div>
+          <div class="family-tree" aria-label="Carter family tree">
+            <div class="generation generation-one">
+              <div class="person"><span class="portrait p1">R</span><b>Robert</b><small>married to Helen</small></div>
+              <span class="couple-line" aria-hidden="true">♥</span>
+              <div class="person"><span class="portrait p2">H</span><b>Helen</b><small>married to Robert</small></div>
+            </div>
+            <div class="tree-line vertical" aria-hidden="true"></div>
+            <div class="generation generation-two">
+              <div class="family-branch">
+                <div class="couple"><div class="person"><span class="portrait p3">A</span><b>Anna</b><small>Robert & Helen’s daughter</small></div><span class="couple-line" aria-hidden="true">♥</span><div class="person"><span class="portrait p4">T</span><b>Tom</b><small>Anna’s husband</small></div></div>
+                <div class="children"><div class="person child"><span class="portrait p5">L</span><b>Leo</b></div><div class="person child"><span class="portrait p6">M</span><b>Maya</b></div></div>
+              </div>
+              <div class="family-branch">
+                <div class="couple"><div class="person"><span class="portrait p7">D</span><b>David</b><small>Robert & Helen’s son</small></div><span class="couple-line" aria-hidden="true">♥</span><div class="person"><span class="portrait p8">S</span><b>Sara</b><small>David’s wife</small></div></div>
+                <div class="children"><div class="person child"><span class="portrait p9">N</span><b>Noah</b></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="question-list" data-questions="tree"></div>
+          <div class="stage-finish" hidden>
+            <div><span class="finish-tick">✓</span><p><strong>Tree-reading mission complete!</strong><br><span class="stage-summary"></span></p></div>
+            <button class="next-button" type="button" data-next="3">Open the final case <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <section class="stage-panel final-stage" id="stage-3" data-stage="3" aria-labelledby="stage3Title" hidden>
+          <div class="case-banner">
+            <div class="case-stamp">FINAL<br>CASE</div>
+            <div><p class="stage-kicker">MISSION 04</p><h3 id="stage3Title">Family Detective</h3><p>A new student is telling you about the Rivera family. Can you identify every connection?</p></div>
+          </div>
+          <article class="case-file">
+            <div class="file-top"><span>CASE FILE #021</span><span>STATUS: OPEN</span></div>
+            <p>“I’m <strong>Lucas</strong>. My parents are <strong>Eva</strong> and <strong>Raúl</strong>. I have one sister, <strong>Clara</strong>. Eva’s brother is <strong>Jorge</strong>, and his wife is <strong>Marina</strong>. They have two children: <strong>Hugo</strong> and <strong>Sofía</strong>. My mother’s parents are <strong>Pilar</strong> and <strong>Andrés</strong>.”</p>
+          </article>
+          <div class="question-list" data-questions="detective"></div>
+          <div class="completion-card" id="completionCard" hidden>
+            <div class="burst" aria-hidden="true">★</div>
+            <p class="eyebrow">CASE CLOSED</p>
+            <h3>Family connections: mastered.</h3>
+            <p id="completionMessage"></p>
+            <div class="final-score"><span>Your final score</span><strong id="finalScore">0/20</strong></div>
+            <div class="completion-actions">
+              <button class="secondary-button" id="reviewButton" type="button">Review my answers</button>
+              <button class="primary-button compact" id="retryButton" type="button">Try again</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Family Connections</strong> · Unit 1 revision for 2º ESO</p>
+    <p>Progress is saved on this device. No student data is collected.</p>
+  </footer>
+
+  <dialog id="resetDialog">
+    <form method="dialog">
+      <div class="dialog-icon" aria-hidden="true">↻</div>
+      <h2>Reset your progress?</h2>
+      <p>This will clear every answer and return to Mission 1.</p>
+      <div class="dialog-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="danger-button" value="confirm">Reset everything</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
